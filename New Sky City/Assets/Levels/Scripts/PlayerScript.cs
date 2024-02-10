@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float jumpForce = 10f;
+    public float jumpForce = 5f;
     private Rigidbody2D rb;
     private bool isGrounded = true;
 
@@ -17,7 +17,7 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         Move();
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump"))
         {
             Jump();
         }

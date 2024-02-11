@@ -1,0 +1,119 @@
+[33me006f5d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m HEAD@{0}: checkout: moving from master to master
+[33me006f5d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m HEAD@{1}: pull: Fast-forward
+[33m977a25a[m HEAD@{2}: checkout: moving from Magron to master
+[33me9e0533[m[33m ([m[1;31morigin/Magron[m[33m, [m[1;32mMagron[m[33m)[m HEAD@{3}: pull: Merge made by the 'ort' strategy.
+[33mca8daa0[m HEAD@{4}: rebase (finish): returning to refs/heads/Magron
+[33mca8daa0[m HEAD@{5}: rebase (pick): animations and alien movement
+[33m6c3f804[m HEAD@{6}: rebase (pick): animations and code
+[33m977a25a[m HEAD@{7}: rebase (start): checkout master
+[33m4a0e9fa[m HEAD@{8}: commit: animations and alien movement
+[33mff0fbd1[m HEAD@{9}: checkout: moving from master to Magron
+[33m977a25a[m HEAD@{10}: pull: Fast-forward
+[33m78f96ce[m HEAD@{11}: checkout: moving from Magron to master
+[33mff0fbd1[m HEAD@{12}: rebase (finish): returning to refs/heads/Magron
+[33mff0fbd1[m HEAD@{13}: rebase (pick): animations and code
+[33m78f96ce[m HEAD@{14}: rebase (start): checkout master
+[33ma91c3ef[m HEAD@{15}: commit: animations and code
+[33m5e48fba[m HEAD@{16}: checkout: moving from master to Magron
+[33m78f96ce[m HEAD@{17}: pull: Fast-forward
+[33me93c18f[m HEAD@{18}: checkout: moving from Magron to master
+[33m5e48fba[m HEAD@{19}: checkout: moving from master to Magron
+[33me93c18f[m HEAD@{20}: checkout: moving from Magron to master
+[33m5e48fba[m HEAD@{21}: commit: sbrwlk anim
+[33m485a1d3[m HEAD@{22}: rebase (finish): returning to refs/heads/Magron
+[33m485a1d3[m HEAD@{23}: rebase (pick): swing animation files
+[33me93c18f[m HEAD@{24}: rebase (start): checkout master
+[33m3526537[m HEAD@{25}: checkout: moving from master to Magron
+[33me93c18f[m HEAD@{26}: pull: Fast-forward
+[33mc349516[m HEAD@{27}: checkout: moving from Magron to master
+[33m3526537[m HEAD@{28}: commit: swing animation files
+[33ma1d9e90[m HEAD@{29}: rebase (finish): returning to refs/heads/Magron
+[33ma1d9e90[m HEAD@{30}: rebase (pick): rebasing
+[33mc349516[m HEAD@{31}: rebase (start): checkout master
+[33m50e0993[m HEAD@{32}: commit: rebasing
+[33m67321aa[m HEAD@{33}: checkout: moving from master to Magron
+[33mc349516[m HEAD@{34}: pull: Fast-forward
+[33m08763c4[m HEAD@{35}: checkout: moving from Magron to master
+[33m67321aa[m HEAD@{36}: checkout: moving from master to Magron
+[33m08763c4[m HEAD@{37}: pull: Fast-forward
+[33m737146b[m HEAD@{38}: checkout: moving from Magron to master
+[33m67321aa[m HEAD@{39}: checkout: moving from master to Magron
+[33m737146b[m HEAD@{40}: checkout: moving from Magron to master
+[33m67321aa[m HEAD@{41}: commit: start menu building
+[33mf0ef1b8[m HEAD@{42}: commit: title screen design
+[33m2e4ec5d[m HEAD@{43}: checkout: moving from master to Magron
+[33m737146b[m HEAD@{44}: pull: Fast-forward
+[33m2e4ec5d[m HEAD@{45}: checkout: moving from Magron to master
+[33m2e4ec5d[m HEAD@{46}: checkout: moving from master to Magron
+[33m2e4ec5d[m HEAD@{47}: checkout: moving from Magron to master
+[33m2e4ec5d[m HEAD@{48}: rebase (finish): returning to refs/heads/Magron
+[33m2e4ec5d[m HEAD@{49}: rebase (start): checkout master
+[33m09a036b[m HEAD@{50}: checkout: moving from master to Magron
+[33m2e4ec5d[m HEAD@{51}: pull: Fast-forward
+[33mb09fb2f[m HEAD@{52}: checkout: moving from Magron to master
+[33m09a036b[m HEAD@{53}: commit: ignore this
+[33mdc6ea86[m HEAD@{54}: checkout: moving from master to Magron
+[33mb09fb2f[m HEAD@{55}: checkout: moving from Magron to master
+[33mdc6ea86[m HEAD@{56}: checkout: moving from master to Magron
+[33mb09fb2f[m HEAD@{57}: checkout: moving from Magron to master
+[33mdc6ea86[m HEAD@{58}: checkout: moving from master to Magron
+[33mb09fb2f[m HEAD@{59}: checkout: moving from Magron to master
+[33mdc6ea86[m HEAD@{60}: commit: re-adding animations
+[33m2a3ca6f[m HEAD@{61}: checkout: moving from master to Magron
+[33mb09fb2f[m HEAD@{62}: pull: Fast-forward
+[33mcbd0a24[m HEAD@{63}: checkout: moving from Magron to master
+[33m2a3ca6f[m HEAD@{64}: commit: uploaded all files and meta data
+[33mcbd0a24[m HEAD@{65}: checkout: moving from master to Magron
+[33mcbd0a24[m HEAD@{66}: commit (merge): ???
+[33mee22943[m HEAD@{67}: checkout: moving from mergingStuffs to master
+[33m92b3a04[m[33m ([m[1;31morigin/mergingStuffs[m[33m)[m HEAD@{68}: commit: removed now?
+[33mfc29a48[m HEAD@{69}: checkout: moving from master to mergingStuffs
+[33mee22943[m HEAD@{70}: commit: files deleted/changed location
+[33md114c83[m HEAD@{71}: pull: Fast-forward
+[33m565f990[m HEAD@{72}: pull: Fast-forward
+[33m485cf13[m HEAD@{73}: checkout: moving from mergingStuffs to master
+[33mfc29a48[m HEAD@{74}: pull: Merge made by the 'ort' strategy.
+[33ma5535be[m HEAD@{75}: rebase (finish): returning to refs/heads/mergingStuffs
+[33ma5535be[m HEAD@{76}: rebase (pick): blah blah blah
+[33m485cf13[m HEAD@{77}: rebase (start): checkout master
+[33m4ed3685[m HEAD@{78}: commit: blah blah blah
+[33me1e11ac[m HEAD@{79}: checkout: moving from master to mergingStuffs
+[33m485cf13[m HEAD@{80}: pull: Fast-forward
+[33m1822cdd[m HEAD@{81}: checkout: moving from mergingStuffs to master
+[33me1e11ac[m HEAD@{82}: checkout: moving from mergingStuffs to mergingStuffs
+[33me1e11ac[m HEAD@{83}: commit: Alee SampleScene addition
+[33m7abadb8[m HEAD@{84}: commit: ground enemy from Alee
+[33m1822cdd[m HEAD@{85}: checkout: moving from master to mergingStuffs
+[33m1822cdd[m HEAD@{86}: pull: Fast-forward
+[33mc552932[m HEAD@{87}: checkout: moving from playerAnimation to master
+[33m84f4ff1[m[33m ([m[1;31morigin/playerAnimation[m[33m)[m HEAD@{88}: commit: charlie moves
+[33m92ca384[m HEAD@{89}: checkout: moving from master to playerAnimation
+[33mc552932[m HEAD@{90}: checkout: moving from playerAnimation to master
+[33m92ca384[m HEAD@{91}: commit: Charlie
+[33mc552932[m HEAD@{92}: checkout: moving from master to playerAnimation
+[33mc552932[m HEAD@{93}: pull: Fast-forward
+[33m6ebd1cd[m HEAD@{94}: pull: Fast-forward
+[33ma0968d9[m HEAD@{95}: pull: Fast-forward
+[33m6b78290[m HEAD@{96}: pull: Fast-forward
+[33m93da2fa[m HEAD@{97}: commit (merge): anime lulz
+[33m762716e[m HEAD@{98}: commit: anime llulz
+[33m14ac8c1[m HEAD@{99}: pull: Merge made by the 'ort' strategy.
+[33mc0f1d37[m HEAD@{100}: commit: starry background
+[33med21c4b[m HEAD@{101}: pull: Fast-forward
+[33m236c5f6[m HEAD@{102}: commit: Starry Background
+[33m1705aba[m HEAD@{103}: pull: Fast-forward
+[33m5829bd1[m HEAD@{104}: commit: beginning work on title screen
+[33m05e97ff[m HEAD@{105}: commit: test scene
+[33maf5bd02[m HEAD@{106}: commit: point filter
+[33m5be5bbc[m HEAD@{107}: pull: Fast-forward
+[33ma7cbceb[m HEAD@{108}: commit (merge): a
+[33m8a84eb5[m HEAD@{109}: commit: walk1
+[33m3ae8504[m HEAD@{110}: commit: walk1 fix
+[33m4035722[m HEAD@{111}: commit: grass and car
+[33m5b24e88[m HEAD@{112}: commit: assets organized
+[33m1088ba2[m HEAD@{113}: commit: Moved assets where they should be
+[33m5a471d8[m HEAD@{114}: pull: Fast-forward
+[33m9a8846e[m HEAD@{115}: commit: test
+[33m4f59323[m HEAD@{116}: commit: Try this?
+[33m1fbf40a[m HEAD@{117}: commit: Pixel Adventure assets
+[33med2d4c1[m HEAD@{118}: commit (initial): Initial Commit

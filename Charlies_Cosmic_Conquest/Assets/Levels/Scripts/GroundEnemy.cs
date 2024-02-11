@@ -35,6 +35,7 @@ public class GroundEnemy : MonoBehaviour
         else
         {
             isChasingPlayer = false;
+            sprite.flipX = false;
         }
 
         if (isChasingPlayer)

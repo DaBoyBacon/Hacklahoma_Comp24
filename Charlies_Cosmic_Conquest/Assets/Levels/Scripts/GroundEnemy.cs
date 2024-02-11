@@ -12,20 +12,20 @@ public class GroundEnemy : MonoBehaviour
     public float groundCheckRadius = 0.2f;
     public Transform obstacleCheck; // Transform to check for obstacles
     public float obstacleCheckDistance = 1f; // Distance to check for obstacles
+    private SpriteRenderer sprite;
 
     private Rigidbody2D rb;
-    private bool isGrounded = false;
     private bool isChasingPlayer = false;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         if (distanceToPlayer <= chaseDistance)
@@ -49,7 +49,7 @@ public class GroundEnemy : MonoBehaviour
 
     void MoveLeft()
     {
-        rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(-moveSpeed/2, rb.velocity.y);
 
         // Ensure the enemy faces left when moving left
         transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
@@ -58,18 +58,21 @@ public class GroundEnemy : MonoBehaviour
     void ChasePlayer()
     {
         float step = moveSpeed * Time.deltaTime;
-        transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x, transform.position.y), step);
+
+        if(step > 0)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x, transform.position.y), step);
+        }
+        
 
         // Rotate to face the player when chasing
         if (transform.position.x > player.position.x)
         {
-            // Player is to the left, face left
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            sprite.flipX = false;
         }
         else
         {
-            // Player is to the right, face right
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            sprite.flipX = true;
         }
     }
 

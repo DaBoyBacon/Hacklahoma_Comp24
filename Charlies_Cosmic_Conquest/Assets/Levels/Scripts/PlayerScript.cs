@@ -29,27 +29,29 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
-        dbx = Input.GetAxisRaw("Horizontal");
         Move();
-        
+        dbx = Input.GetAxisRaw("Horizontal");
         UpdateMoveAnim();
         if (Input.GetButtonDown("Jump") && (isGrounded || jumpsRemaining > 0))
         {
             Jump();
         }
 
-        rb.velocity = new Vector2(dbx * moveSpeed, rb.velocity.y);
+
+        float moveInput = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
 
     }
 
     void UpdateMoveAnim() {
 
+        float moveInput = Input.GetAxisRaw("Horizontal");
 
         if (knockBackCounter <= 0)
         {
             
-            rb.velocity = new Vector2(dbx * moveSpeed, rb.velocity.y);
+            rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
         }
         else
@@ -84,7 +86,8 @@ public class PlayerScript : MonoBehaviour
 
     void Move()
     {
-        rb.velocity = new Vector2(dbx * moveSpeed, rb.velocity.y);
+        float moveInput = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
     }
 
     void Jump()
@@ -92,7 +95,6 @@ public class PlayerScript : MonoBehaviour
         rb.velocity = Vector2.up * jumpForce;
         jumpsRemaining --;
         isGrounded = false;
-        anim.SetBool("swung", true);
     }
     
     private void OnCollisionEnter2D(Collision2D collision)
@@ -101,7 +103,6 @@ public class PlayerScript : MonoBehaviour
         {
             isGrounded = true;
             jumpsRemaining = maxJumps;
-            anim.SetBool("swung", false);
         }
     }
 

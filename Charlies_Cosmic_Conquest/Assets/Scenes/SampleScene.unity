@@ -646,7 +646,7 @@ Animator:
   m_GameObject: {fileID: 2123051041}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 001ef7addc92fd14091c293a14278144, type: 2}
+  m_Controller: {fileID: 9100000, guid: f9c60491960a0ce429b52bea43237681, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -898,6 +898,18 @@ PrefabInstance:
     - target: {fileID: 3992151584713943405, guid: 630869cb75bcc1144a94d6bd6790be8e, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3992151584713943407, guid: 630869cb75bcc1144a94d6bd6790be8e, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3992151584713943407, guid: 630869cb75bcc1144a94d6bd6790be8e, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3992151584713943407, guid: 630869cb75bcc1144a94d6bd6790be8e, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 630869cb75bcc1144a94d6bd6790be8e, type: 3}

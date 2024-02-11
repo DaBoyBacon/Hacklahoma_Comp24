@@ -8,6 +8,10 @@ public class PlayerScript : MonoBehaviour
     public float jumpForce = 10f;
     private Rigidbody2D rb;
     private bool isGrounded = true;
+    private int maxJumps = 1;
+    private int jumpsRemaining = 1;
+
+
 
     void Start()
     {
@@ -17,11 +21,12 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         Move();
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && jumpsRemaining > 0 && isGrounded)
         {
             Jump();
         }
 
+<<<<<<< Updated upstream
         float moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
@@ -34,6 +39,9 @@ public class PlayerScript : MonoBehaviour
         {
             transform.eulerAngles = new Vector2(0, 180); // Facing left
         }
+=======
+
+>>>>>>> Stashed changes
     }
 
     void Move()
@@ -45,7 +53,7 @@ public class PlayerScript : MonoBehaviour
     void Jump()
     {
         rb.velocity = Vector2.up * jumpForce;
-        isGrounded = false;
+        jumpsRemaining --;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -53,7 +61,15 @@ public class PlayerScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+            jumpsRemaining = maxJumps;
         }
     }
 
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = false;
+        }
+    }
 }

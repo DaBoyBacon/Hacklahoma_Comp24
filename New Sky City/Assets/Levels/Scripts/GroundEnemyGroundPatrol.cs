@@ -15,7 +15,7 @@ public class GroundEnemyGroundPatrol : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>(); // Corrected Rigidbody2D spelling
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
         currentPoint = pointB.transform;
         anim.SetBool("isRunning", true);
     }

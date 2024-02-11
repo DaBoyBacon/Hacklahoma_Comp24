@@ -7,8 +7,7 @@ public class StartMenu : MonoBehaviour
 {
     public void NextScene()
     {
-        SceneManager.LoadScene("SampleScene");
-        Debug.Log("Scene Loaded");
+        SceneManager.LoadScene(2);
     }
     
 }

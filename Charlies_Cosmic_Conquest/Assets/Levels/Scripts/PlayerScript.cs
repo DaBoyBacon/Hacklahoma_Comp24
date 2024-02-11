@@ -33,13 +33,8 @@ public class PlayerScript : MonoBehaviour
             Jump();
         }
 
-        
-
         float moveInput = dbx;
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-
-
-        
 
     }
 

@@ -50,12 +50,27 @@ public class GroundEnemy : MonoBehaviour
     {
         rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
         CheckAndJumpObstacle();
+
+        // Ensure the enemy faces left when moving left
+        transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
 
     void ChasePlayer()
     {
         float step = moveSpeed * Time.deltaTime;
         transform.position = Vector2.MoveTowards(transform.position, new Vector2(player.position.x, transform.position.y), step);
+
+        // Rotate to face the player when chasing
+        if (transform.position.x > player.position.x)
+        {
+            // Player is to the left, face left
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else
+        {
+            // Player is to the right, face right
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
     }
 
     void CheckAndJumpObstacle()

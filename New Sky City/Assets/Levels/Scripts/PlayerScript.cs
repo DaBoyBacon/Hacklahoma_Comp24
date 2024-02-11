@@ -26,7 +26,10 @@ public class PlayerScript : MonoBehaviour
             Jump();
         }
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
         float moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 

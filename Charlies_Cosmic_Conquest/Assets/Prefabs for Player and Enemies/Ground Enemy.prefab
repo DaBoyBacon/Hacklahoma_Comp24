@@ -265,7 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   jumpForce: 700
-  player: {fileID: 0}
+  player: {fileID: 3208589924533297345, guid: 2f5339b22de0f2d468e8d7dc2e33e9b4, type: 3}
   chaseDistance: 5
   groundLayer:
     serializedVersion: 2

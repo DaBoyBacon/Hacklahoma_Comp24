@@ -21,7 +21,7 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         Move();
-        if (Input.GetButtonDown("Jump") && jumpsRemaining > 0 && isGrounded)
+        if (Input.GetButtonDown("Jump") && (isGrounded || jumpsRemaining > 0))
         {
             Jump();
         }
@@ -52,11 +52,12 @@ public class PlayerScript : MonoBehaviour
     {
         rb.velocity = Vector2.up * jumpForce;
         jumpsRemaining --;
+        isGrounded = false;
     }
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Untagged"))
         {
             isGrounded = true;
             jumpsRemaining = maxJumps;
@@ -65,9 +66,9 @@ public class PlayerScript : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Ground"))
+        if(collision.gameObject.CompareTag("Untagged"))
         {
-            isGrounded = false;
+           isGrounded = false;
         }
     }
 }

@@ -48,8 +48,11 @@ public class GroundEnemyGroundPatrol : MonoBehaviour
 
     private void MoveTowardsCurrentPoint()
     {
-        // Move towards the current point
-        transform.position = Vector2.MoveTowards(transform.position, currentPoint.position, speed * Time.deltaTime);
+        // Calculate the next position, taking into account the speed and time
+        Vector2 nextPosition = Vector2.MoveTowards(body.position, currentPoint.position, speed * Time.deltaTime);
+
+        // Move the Rigidbody2D to the next position
+        body.MovePosition(nextPosition);
     }
 
     private void FlipDirection()

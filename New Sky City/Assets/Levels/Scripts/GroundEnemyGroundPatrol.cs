@@ -11,13 +11,17 @@ public class GroundEnemyGroundPatrol : MonoBehaviour
     private Transform currentPoint; // Corrected spelling
     public float speed;
 
-    // Start is called before the first frame update
     void Start()
     {
-        body = GetComponent<Rigidbody2D>(); // Corrected Rigidbody2D spelling
-        //anim = GetComponent<Animator>();
+        body = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         currentPoint = pointB.transform;
-        anim.SetBool("isRunning", true);
+
+        // Optionally, remove the warning log or handle the case where the animator is not needed
+        if (anim != null)
+        {
+            anim.SetBool("isRunning", true);
+        }
     }
 
     // Update is called once per frame
@@ -54,4 +58,5 @@ public class GroundEnemyGroundPatrol : MonoBehaviour
         Vector3 currentRotation = transform.eulerAngles;
         transform.eulerAngles = new Vector3(currentRotation.x, currentRotation.y + 180, currentRotation.z);
     }
+
 }

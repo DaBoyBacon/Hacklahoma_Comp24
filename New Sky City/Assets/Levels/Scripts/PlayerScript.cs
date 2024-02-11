@@ -26,7 +26,6 @@ public class PlayerScript : MonoBehaviour
             Jump();
         }
 
-<<<<<<< Updated upstream
         float moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
@@ -39,9 +38,7 @@ public class PlayerScript : MonoBehaviour
         {
             transform.eulerAngles = new Vector2(0, 180); // Facing left
         }
-=======
 
->>>>>>> Stashed changes
     }
 
     void Move()

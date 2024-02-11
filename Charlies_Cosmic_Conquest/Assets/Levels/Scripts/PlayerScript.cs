@@ -8,19 +8,26 @@ public class PlayerScript : MonoBehaviour
     public float jumpForce = 10f;
     private Rigidbody2D rb;
     private bool isGrounded = true;
-    private int maxJumps = 1;
+    private static int maxJumps = 1;
     private int jumpsRemaining = 1;
+    private float dbx;
+    private Animator anim;
+    private SpriteRenderer sprite;
 
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
         Move();
+        dbx = Input.GetAxisRaw("Horizontal");
+        UpdateMoveAnim();
         if (Input.GetButtonDown("Jump") && (isGrounded || jumpsRemaining > 0))
         {
             Jump();
@@ -31,15 +38,23 @@ public class PlayerScript : MonoBehaviour
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
 
-        if (moveInput > 0)
-        {
-            transform.eulerAngles = new Vector2(0, 0); // Facing right
-        }
-        else if (moveInput < 0)
-        {
-            transform.eulerAngles = new Vector2(0, 180); // Facing left
-        }
+    }
 
+    void UpdateMoveAnim() { 
+        if(dbx > 0f)
+        {
+            anim.SetBool("moving", true);
+            sprite.flipX = false;
+        }
+        else if(dbx < 0f)
+        {
+            anim.SetBool("moving", true);
+            sprite.flipX = true;
+        }
+        else
+        {
+            anim.SetBool("moving", false);
+        }
     }
 
     void Move()

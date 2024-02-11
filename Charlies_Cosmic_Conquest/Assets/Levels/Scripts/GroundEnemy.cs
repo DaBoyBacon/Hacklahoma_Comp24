@@ -17,6 +17,7 @@ public class GroundEnemy : MonoBehaviour
     private bool isGrounded = false;
     private bool isChasingPlayer = false;
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

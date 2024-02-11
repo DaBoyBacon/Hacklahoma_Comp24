@@ -21,6 +21,19 @@ public class PlayerScript : MonoBehaviour
         {
             Jump();
         }
+
+        float moveInput = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+
+        // Rotate player to face the direction of movement
+        if (moveInput > 0)
+        {
+            transform.eulerAngles = new Vector2(0, 0); // Facing right
+        }
+        else if (moveInput < 0)
+        {
+            transform.eulerAngles = new Vector2(0, 180); // Facing left
+        }
     }
 
     void Move()

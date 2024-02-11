@@ -13,6 +13,7 @@ public class PlayerScript : MonoBehaviour
     private int jumpsRemaining = 1;
     private SpriteRenderer sprite;
     private Animator anim;
+    private float dbx;
 
 
     void Start()
@@ -24,6 +25,7 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
+        dbx = Input.GetAxisRaw("Horizontal");
         Move();
         UpdateMovementAnimation();
         if (Input.GetButtonDown("Jump") && (isGrounded || jumpsRemaining > 0))
@@ -33,7 +35,7 @@ public class PlayerScript : MonoBehaviour
 
         
 
-        float moveInput = Input.GetAxisRaw("Horizontal");
+        float moveInput = dbx;
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
 
@@ -43,7 +45,7 @@ public class PlayerScript : MonoBehaviour
 
     void Move()
     {
-        float moveInput = Input.GetAxisRaw("Horizontal");
+        float moveInput = dbx;
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
     }
 
@@ -73,13 +75,13 @@ public class PlayerScript : MonoBehaviour
     
     private void UpdateMovementAnimation()
     {
-        if (Input.GetAxisRaw("Horizontal") > 0f)
+        if (dbx > 0f)
         {
             anim.SetBool("moving", true);
             sprite.flipX = false;   
 
         }
-        else if (Input.GetAxisRaw("Horizontal") < 0f)
+        else if (dbx < 0f)
         {
             anim.SetBool("moving", true);
             sprite.flipX = true;

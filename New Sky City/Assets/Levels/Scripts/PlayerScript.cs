@@ -21,15 +21,19 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         Move();
-        if (Input.GetButtonDown("Jump") && jumpsRemaining > 0 && isGrounded)
+        if (Input.GetButtonDown("Jump") && (isGrounded || jumpsRemaining > 0))
         {
             Jump();
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 15587ec372408e5d86eb18f333d71886333761d7
         float moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
-        // Rotate player to face the direction of movement
+
         if (moveInput > 0)
         {
             transform.eulerAngles = new Vector2(0, 0); // Facing right
@@ -51,11 +55,12 @@ public class PlayerScript : MonoBehaviour
     {
         rb.velocity = Vector2.up * jumpForce;
         jumpsRemaining --;
+        isGrounded = false;
     }
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Untagged"))
         {
             isGrounded = true;
             jumpsRemaining = maxJumps;
@@ -64,9 +69,9 @@ public class PlayerScript : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Ground"))
+        if(collision.gameObject.CompareTag("Untagged"))
         {
-            isGrounded = false;
+           isGrounded = false;
         }
     }
 }

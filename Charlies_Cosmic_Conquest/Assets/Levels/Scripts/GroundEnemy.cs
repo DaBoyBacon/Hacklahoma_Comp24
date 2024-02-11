@@ -49,7 +49,6 @@ public class GroundEnemy : MonoBehaviour
     void MoveLeft()
     {
         rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
-        CheckAndJumpObstacle();
 
         // Ensure the enemy faces left when moving left
         transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
@@ -70,17 +69,6 @@ public class GroundEnemy : MonoBehaviour
         {
             // Player is to the right, face right
             transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
-    }
-
-    void CheckAndJumpObstacle()
-    {
-        RaycastHit2D hit = Physics2D.Raycast(obstacleCheck.position, Vector2.left, obstacleCheckDistance, obstacleLayer);
-        bool shouldJump = hit.collider != null;
-
-        if (shouldJump && isGrounded)
-        {
-            rb.AddForce(new Vector2(0, jumpForce));
         }
     }
 

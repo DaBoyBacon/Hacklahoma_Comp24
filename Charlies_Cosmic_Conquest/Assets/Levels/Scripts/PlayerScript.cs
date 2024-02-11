@@ -14,7 +14,11 @@ public class PlayerScript : MonoBehaviour
     private Animator anim;
     private SpriteRenderer sprite;
 
+    public float knockBackForce;
+    public float knockBackCounter;
+    public float knockBackTotalTime;
 
+    public bool knockFromRight;
 
     void Start()
     {
@@ -40,8 +44,31 @@ public class PlayerScript : MonoBehaviour
 
     }
 
-    void UpdateMoveAnim() { 
-        if(dbx > 0f)
+    void UpdateMoveAnim() {
+
+        float moveInput = Input.GetAxisRaw("Horizontal");
+
+        if (knockBackCounter <= 0)
+        {
+            
+            rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+
+        }
+        else
+        {
+            if(knockFromRight == true)
+            {
+                rb.velocity = new Vector2(-knockBackForce, knockBackForce);
+            }
+            if(knockFromRight == false)
+            {
+                rb.velocity = new Vector2(knockBackForce, knockBackForce);
+            }
+
+            knockBackCounter -= Time.deltaTime;
+        }
+
+        if (dbx > 0f)
         {
             anim.SetBool("moving", true);
             sprite.flipX = false;
